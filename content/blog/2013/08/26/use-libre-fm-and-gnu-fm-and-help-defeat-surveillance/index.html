@@ -1,0 +1,33 @@
+	<title></title>
+  <body>
+	<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Use Libre.fm and GNU FM and help defeat&amp;nbsp;surveillance</title>
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<style>
+  body { font-size: 100%; font-family: sans-serif; }
+</style>
+</head>
+<body>
+
+<h1>Use Libre.fm and GNU FM and help defeat&amp;nbsp;surveillance</h1>
+
+<p><time datetime="2013-08-26">26 August, 2013</time></p>
+
+<p>Right now, we&#8217;re working on a brand new look and feel for all GNU FM sites, based on the latest release of Bootstrap (we promise it&#8217;ll be less purple) and I thought I&#8217;d take a few minutes to share some ideas I&#8217;ve had recently on the subject of privacy and surveillance.</p>
+<p>As you hopefully know if you use Libre.fm, we do not log your personally identifiable information, such as your IP address, screen resolution, etc. Almost every other website does this in some way, either with a program such as Google Analytics, or with their server logs.</p>
+<p>Here&#8217;s exactly what we store on the site right now:</p>
+<pre>libre.fm:80 127.0.0.1 - - [25/Aug/2013:06:26:02 -0700] "GET /themes/librefm/img/player/seek-backward.png HTTP/1.1" 304 188 "-" "Mozilla/5.0 (compatible; YandexImages/3.0; +http://yandex.com/bots)"
+
+libre.fm:80 127.0.0.1 - - [25/Aug/2013:06:25:57 -0700] "GET /2.0/?method=track.gettoptags&amp;artist=Tryad&amp;track=Lovely&amp;format=json HTTP/1.1" 200 3444 "http://libre.fm/user/Trim/station" "Mozilla/5.0 (X11; Linux x86_64; rv:23.0) Gecko/20100101 Firefox/23.0 Iceweasel/23.0.1"</pre>
+<p><span style="font-family:Georgia, 'Bitstream Charter', serif;font-size:14px;line-height:1.7;"> In these results, we can see that a search engine indexed one of our images, and that another user tried to find the top tracks by Tryad, but we don&#8217;t know which user is doing this, or where they are located.<br />
+</span><span style="font-family:Georgia, 'Bitstream Charter', serif;font-size:14px;line-height:1.7;"><br />
+<strong>This is not true of sites</strong> like Last.fm, and especially <strong>not true of Facebook</strong>. Facebook apps work with sites such as </span><a style="font-family:Georgia, 'Bitstream Charter', serif;font-size:14px;line-height:1.7;" href="http://blog.rdio.com/us/2011/09/now-playing-on-facebook.html">Rdio</a><span style="font-family:Georgia, 'Bitstream Charter', serif;font-size:14px;line-height:1.7;">, </span><a style="font-family:Georgia, 'Bitstream Charter', serif;font-size:14px;line-height:1.7;" href="http://lifehacker.com/5843847/how-to-keep-spotify-from-broadcasting-your-music-taste-to-all-of-facebook">Spotify</a><span style="font-family:Georgia, 'Bitstream Charter', serif;font-size:14px;line-height:1.7;"> and others to show up to the minute live listening information from other sites, right in the users&#8217; Facebook action stream.</span></p>
+<p>For maximum privacy, we recommend <a href="http://bugs.foocorp.net/projects/fm/wiki/How_to_install">installing your own GNU FM server</a>. We have already demonstrated limited federation abilities at FOSDEM last year, and have recently green lit our work on the GNU social project which will give us a strong, federated social presence, and technology we can piggy back onto.</p>
+<p>With the 30th anniversary of the GNU project coming, now is an important time for <a href="https://www.fsf.org/campaigns/surveillance">all GNU projects to work together on providing a real alternative</a> to sites that users cannot control.</p>
+
+</body>
+</html>
+  </body>

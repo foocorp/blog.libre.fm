@@ -1,0 +1,123 @@
+	<title></title>
+  <body>
+	<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Bunch of updates to Libre.fm this week&amp;nbsp;(2024/10/06)</title>
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<style>
+  body { font-size: 100%; font-family: sans-serif; }
+</style>
+</head>
+<body>
+
+<h1>Bunch of updates to Libre.fm this week&amp;nbsp;(2024/10/06)</h1>
+
+<p><time datetime="2024-10-06">6 October, 2024</time></p>
+
+<figure class="wp-block-image alignright size-large is-resized"><a href="/wp-content/uploads/2024/10/screenshot-2024-10-06-at-6.13.53e280afpm.png"><img data-attachment-id="166" data-permalink="/2024/10/06/bunch-of-updates-to-libre-fm-this-week-2024-10-06/screenshot-2024-10-06-at-6-13-53-pm/" data-orig-file="/wp-content/uploads/2024/10/screenshot-2024-10-06-at-6.13.53e280afpm.png" data-orig-size="976,1200" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="Screenshot 2024-10-06 at 6.13.53 PM" data-image-description="" data-image-caption="" data-medium-file="/wp-content/uploads/2024/10/screenshot-2024-10-06-at-6.13.53e280afpm.png?w=244" data-large-file="/wp-content/uploads/2024/10/screenshot-2024-10-06-at-6.13.53e280afpm.png?w=833" tabindex="0" role="button" loading="lazy" width="833" height="1024" src="/wp-content/uploads/2024/10/screenshot-2024-10-06-at-6.13.53e280afpm.png?w=833" alt="Founded Libre.fm, co-founder GNU social. Helped start the fediverse. Making Orang-U movies, @mattl here, there and (almost) everywhere. Check my link below to all my social media sites and my personal website.
+
+Personal website: https://mat.tl/
+
+Fediverse: https://social.coop/@mattl" class="wp-image-166" style="width:300px" /></a><figcaption class="wp-element-caption">You too could have a profile like this!</figcaption></figure>
+
+
+
+<p><em>Hey, it&#8217;s <a href="https://libre.fm/user/mattl">Dr. Matt Lee</a> here with a weekly roundup of things with Libre.fm. Enjoy.</em></p>
+
+
+
+<ul class="wp-block-list">
+<li>New look based on <a href="https://omg.lol">https://omg.lol</a> (you really should be using this for your <a href="https://1800www.com">personal website</a>)</li>
+
+
+
+<li>Caching fixes/improvements for profiles</li>
+
+
+
+<li>Linking the fediverse URL on profiles now (see <a href="https://libre.fm/user/mattl">https://libre.fm/user/mattl</a> and follow me on the social web)</li>
+
+
+
+<li>rel=&#8221;me&#8221; support for personal website and fediverse URLs (add your personal website and fediverse URLs to your active profile and to your Mastodon profile and personal website) (this is the first step toward <a href="https://github.com/foocorp/hacienda/issues/37">supporting IndieAuth</a>)</li>
+
+
+
+<li>Prompting new users to add these URLs to their profile</li>
+
+
+
+<li>Prompting new users to use <a href="https://web-scrobbler.com">Web Scrobbler</a> (for now) to get their first scrobbles </li>
+
+
+
+<li>Switched to <a href="https://github.com/foocorp/hacienda/issues/15">Libravatar.org</a> for user profile icons</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading">What can I do to help?</h2>
+
+
+
+<ul class="wp-block-list">
+<li><a href="https://libre.fm/register.php">Sign up to the website</a></li>
+
+
+
+<li><a href="https://github.com/foocorp/hacienda/issues/39">Join the personal website checkin list</a></li>
+
+
+
+<li><a href="https://github.com/foocorp/hacienda/issues/40">Volunteer as a beta tester</a></li>
+
+
+
+<li><a href="https://github.com/foocorp/hacienda/issues/38">Help us add clients to the wiki</a></li>
+
+
+
+<li>Follow the #librefm hashtag on the social web and identify problems people are having and direct them to the <a href="https://github.com/foocorp/hacienda/issues">GitHub issues</a> page (which is now linked at the top of the page on Libre.fm)</li>
+
+
+
+<li>Convince people to try <a href="https://web-scrobbler.com">https://web-scrobbler.com</a> for their first scrobbles.</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading">Suggest new music to listen to</h2>
+
+
+
+<p>It&#8217;s been a while, but I&#8217;d love to hear some new music from anyone releasing stuff under a Creative Commons Attribution or Attribution-ShareAlike license. If you have anything to suggest, <a href="https://github.com/foocorp/hacienda/issues/43">please leave it as a comment on GitHub</a>.</p>
+
+
+
+<h2 class="wp-block-heading">Stats</h2>
+
+
+
+<ul class="wp-block-list">
+<li>303430105 listens.</li>
+</ul>
+
+
+
+<ul class="wp-block-list">
+<li>373074 users.</li>
+</ul>
+
+
+
+<p><strong>Got questions? Email me at support@libre.fm and I&#8217;ll answer as many as I can next week.</strong></p>
+
+
+
+<p></p>
+
+</body>
+</html>
+  </body>

@@ -1,0 +1,41 @@
+	<title></title>
+  <body>
+	<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Libre.fm June 2016 downtime, what&amp;nbsp;happened?</title>
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<style>
+  body { font-size: 100%; font-family: sans-serif; }
+</style>
+</head>
+<body>
+
+<h1>Libre.fm June 2016 downtime, what&amp;nbsp;happened?</h1>
+
+<p><time datetime="2016-06-30">30 June, 2016</time></p>
+
+<p>In June 2016, Libre.fm was periodically unavailable for several hours at a time, and then eventually offline for six days. Here&#8217;s what happened.</p>
+<p>This post is written by <a href="http://twitter.com/mattl">Matt Lee</a>, founder of Libre.fm</p>
+<p>So we&#8217;re back &#8212; thankfully. The last few days have been tricky and worrying for Libre.fm.</p>
+<p>To give you an idea of our Libre.fm runs, day to day, let me talk a little about our infrastructure: Libre.fm runs on the <a href="http://bigv.io">Bytemark Cloud (aka BigV)</a> &#8212; we have four servers for Libre.fm, two web servers, a load balancer and a database server. The problem was our database server.</p>
+<p>As of right now (June 30th, 13:20pm Central Time) Libre.fm has 153330128 of your scrobbles &#8212; this represents about 120Gb of PostgreSQL data. Put simply, we ran out of disk space and PostgreSQL shut down.</p>
+<p>The first thing we did was shut the server down, add more space and bring it back up. <strong>PostgreSQL wouldn&#8217;t start.</strong></p>
+<p>Next, I made a complete disk backup of all of the PostgreSQL files, and went to look at our backups on rsync.net. And they were broken &#8212; because of our disk space issues, we&#8217;d been failing to make a backup file, and our backup scripts had been backing up a 0 byte file. <strong>Not good.</strong></p>
+<p><a href="http://twitter.com/clinteroni">Clint Adams</a>, one of the Libre.fm developers had a look at the server, but as he was in Cape Town for DebConf, was unable to figure out the problem. I proceeded to follow some online tutorials for dealing with this, and eventually got PostgreSQL to start, but it was throwing errors about being unable to find things.</p>
+<p>It turned out that the problem was that we had transaction wraparound &#8212; we&#8217;d done more than 2 billion transactions on the database (logins, scrobbles, etc) and the database had lost track of where we were. My reindexing efforts weren&#8217;t helping.</p>
+<p>So, I restored the files a second time, and with help from <span class="buffer bufferLink author c5 user link" title="RhodiumToad (~andrew@82-68-208-21.dsl.in-addr.zen.co.uk)">RhodiumToad on IRC, used the built in diagnostic tools with PostgreSQL to understand the issue better, and to reset the transaction logs. Huge thanks to RhodiumToad! I found this tweet:</span></p>
+<div class="embed-twitter">
+<blockquote class="twitter-tweet" data-width="500" data-dnt="true">
+<p lang="en" dir="ltr">RhodiumToad of <a href="https://twitter.com/hashtag/postgresql?src=hash&amp;ref_src=twsrc%5Etfw">#postgresql</a> on <a href="http://t.co/c70AI38BhZ">http://t.co/c70AI38BhZ</a> is the most helpful personality on all of freenode.</p>
+<p>&mdash; Evan Carroll (@TheEvanCarroll) <a href="https://twitter.com/TheEvanCarroll/status/379010465130491905?ref_src=twsrc%5Etfw">September 14, 2013</a></p></blockquote>
+<p><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></div>
+<p>I was then able to upgrade PostgreSQL from version 9.1 to 9.4, put in a better backup script and tell our backup service <a href="https://www.rsync.net/signup/signup_offer.html?code=1fd75a">rsync.net</a> to alert us if no backups happen for 2 days.</p>
+<p>I was finally ready to bring the site back up, but first&#8230; I had a private look at the stats of the site: 153184145 scrobbles. That number is now 153330314 &#8212; an increase of 146169 &#8212; so while you&#8217;ve been busy listening to music, we&#8217;ve been busy learning about databases and the importance of proper backups.</p>
+<p>It&#8217;s clear to me that we need to do a lot more on Libre.fm &#8212; I&#8217;m sorry we let things get this bad. I&#8217;m going to spend a few hours later this week looking at the most obvious bugs and improvements we can make to the site, and start working on those. If you have your own suggestions, please take a moment to <a href="https://git.gnu.io/users/sign_in?redirect_to_referer=yes">register for our GitLab site</a> and <a href="https://git.gnu.io/foocorp/librefm/issues">report the issue for us</a>.</p>
+<p>Follow <a href="http://twitter.com/librefm">Libre.fm on Twitter at @librefm</a> or follow <a href="http://twitter.com/mattl">@mattl</a> and <a href="http://twitter.com/robmyers">@robmyers</a> and see how Joan of Arc felt.</p>
+
+</body>
+</html>
+  </body>
