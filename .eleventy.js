@@ -1,5 +1,12 @@
 require("dotenv").config();
 
+// const UpgradeHelper = require("@11ty/eleventy-upgrade-help");
+
+//export default function (eleventyConfig) {
+	// If you have other `addPlugin` calls, it’s important that UpgradeHelper is added last.
+	//eleventyConfig.addPlugin(UpgradeHelper);
+	//};
+
 // const cleanCSS = require("clean-css");
 const fs = require("fs");
 const pluginRSS = require("@11ty/eleventy-plugin-rss");
@@ -27,6 +34,8 @@ module.exports = function(config) {
 
   // Assist RSS feed template
   config.addPlugin(pluginRSS);
+  
+  // config.addPlugin(UpgradeHelper);
 
   // Apply performance attributes to images
   //config.addPlugin(lazyImages, {
